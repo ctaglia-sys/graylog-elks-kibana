@@ -7,6 +7,10 @@ metadata:
     type: bd
 
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mongo
   template:
     metadata:
       name: mongo-pod
@@ -19,6 +23,9 @@ spec:
           image: library/mongo:3
           ports:
             - containerPort: 27017
+
+
+
 ---
 apiVersion: v1
 kind: Service
