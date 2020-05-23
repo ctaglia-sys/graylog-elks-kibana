@@ -24,6 +24,11 @@ spec:
           ports:
             - containerPort: 9200
             - containerPort: 9300
+          readinessProbe:
+            tcpSocket:
+              port: 9200
+            initialDelaySeconds: 20
+            periodSeconds: 30
 
 ---
 apiVersion: v1
