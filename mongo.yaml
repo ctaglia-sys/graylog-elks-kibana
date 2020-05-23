@@ -16,7 +16,7 @@ spec:
       name: mongo-pod
       labels:
         app: mongo
-        type: pod-bd
+        type: pod
     spec:
       containers:
         - name: mongodb
@@ -36,6 +36,7 @@ spec:
     service: mongo-deploy
   ports:
     - port: 27017
-      targetPort: 27017
       name: "27017"
+      targetPort: 27017
+    - port:
 
