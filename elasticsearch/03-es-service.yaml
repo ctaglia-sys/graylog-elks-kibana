@@ -6,3 +6,13 @@ metadata:
   labels:
     component: elasticsearch
     role: master
+spec:
+  clusterIP: None
+  ports:
+    - port: 9300
+      protocol: TCP
+      targetPort: 9300
+      name: transport
+  selector:
+    component: elasticsearch
+    role: master
