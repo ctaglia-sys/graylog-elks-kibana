@@ -84,15 +84,10 @@ spec:
     component: elasticsearch
     role: master
   ports:
-    - port: 9300
-      protocol: TCP
-      name: "transport"
-    ClusterIP: None
-
-
-
-
-
+  - name: transport
+    port: 9300
+    protocol: TCP
+  clusterIP: None
 
 
 
