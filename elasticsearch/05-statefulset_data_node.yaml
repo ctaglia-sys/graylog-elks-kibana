@@ -51,9 +51,13 @@ spec:
             - name: ES_JAVA_OPTS
               value: -Xms256m -Xmx256m
             - name: PROCESSORS
+              value: "1"
               valueFrom:
                 fieldRef:
                   fieldPath: limits.cpu
+          resources:
+            limits:
+              cpu: 1
           ports:
             - containerPort: 9300
               name: transport
